@@ -1,3 +1,21 @@
 body{
-    background-color: green;
+    background-color: #D9DCD6;
+}
+*{
+    text-decoration: none;
+}
+.navbar{
+    background:#3A7CA5; font-family: calibri; padding-right: 15px; padding-left: 15px;
+}
+.navdiv{
+    display: flex;align-items: center; justify-content: space-between;
+}
+li{
+    list-style: none; display: inline-block
+}
+li a{
+    color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+}
+.logo a {
+    font-size: 35px; font-weight: 600; color: white
 }
