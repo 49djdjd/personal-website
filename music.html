@@ -9,245 +9,56 @@
 </head>
 
 <body>
-   <nav class="navbar">
-      <div class="navdiv">
-        <div class = "logo"><a href="music.html"><img src="small chococat.png"></a>
+    <input type="radio" name="position"/>
+    <input type="radio" name="position"/>
+    <input type="radio" name="position" checked/>
+    <input type="radio" name="position"/>
+    <input type="radio" name="position"/>
+<!--will make more-->
+    <main id="carousel">
+        <div class="item">
+            <img src="images/1.jpg">
+            <h3>Be the Cowboy</h3>
+            <p class='artist'>Mitski</p>
         </div>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-<div class="body1">
-   <!--make a cursor scroll over (starting off with button)--> 
-<button id="prev-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 text-gray-500">
-            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-2.625 6.75a.75.75 0 1 0-1.5 0v4.5a.75.75 0 0 0 1.5 0V9Z" clip-rule="evenodd" />
-            <path d="M16.125 12a.75.75 0 0 1-.75.75H8.625a.75.75 0 0 1 0-1.5h6.75a.75.75 0 0 1 .75.75Z" />
-        </svg>
-</button>
-<!--<button id="prev-btn"> 
-        <i class="fas fa-arrow-circle-left"></i>
-    </button>-->
-   <!--flip thingy-->
-<div id="flip" class="flip">
-        <!--page 1-->
-    <div id="p1" class="pages">
-        <div class="front">
-            <div id="f1" class="front-content">
-                <img class="cover-img" src="daisy and the scounts (1).jpg">
-            </div>
-        </div>
-        <div class="back">
-                <div id="b1" class="back-content">
-                    <img src="roadkill (1).jpg">
-                </div>
-            </div>
-    </div>
-<!--flip thingy 2nd part-->
-    <!-- page 2-->
-    <div id="p2" class="pages">
-        <div class="front">
-            <div id="f2" class="front-content">
-                <img src="twilight (1).jpg">
-            </div>
-        </div>
-        <div class="back">
-                <div id="b2" class="back-content">
-                    <img src = "who really cares (1).jpg">
-                </div>
-            </div>
-        </div>
-<!--flipthingy 3-->
-    <div id="p3" class="pages">
-        <div class="front">
-            <div id="f3" class="front-content">
-                <img src="i can only be me (1).jpg">
-            </div>
-        </div>
-        <div class="back">
-                <div id="b3" class="back-content">
-                    <img src="gemini rights (1).png">
-                </div>
-            </div>
-        </div>
-<!--flipthingy 4-->
-<div id="p4" class="pages">
-        <div class="front">
-            <div id="f4" class="front-content">
-                <img src="i cant handle change (1).jpg">
-            </div>
-        </div>
-        <div class="back">
-                <div id="b4" class="back-content">
-                    <img src="be the cowboy (1).jpg">
-                </div>
-            </div>
-        </div>
-</div>
- <!-- Next Button -->
- <!---  <button id="next-btn"> 
-
-    
-        <i class="fas fa-arrow-circle-right"></i>
-    </button> -->
-<button id="next-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 text-gray-500">
-            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm2.625 6.75a.75.75 0 1 0-1.5 0v4.5a.75.75 0 0 0 1.5 0V9Z" clip-rule="evenodd" />
-            <path d="M7.875 12a.75.75 0 0 1 .75-.75h6.75a.75.75 0 0 1 0 1.5H8.625a.75.75 0 0 1-.75-.75Z" />
-        </svg>
-    </button>
-</div>>
+        <div class="item"></div>
+            <img src="images/2.jpg">
+             <h3>Maggot</h3>
+            <p class='artist'>Daisy and the Scouts</p>
+        <div class="item"></div>
+             <img src="images/3.jpg">
+             <h3>Gemini Rights</h3>
+             <p class='artist'>Steve Lacy</p>
+        <div class="item"></div>
+            <img src="images/4.jpg">
+            <h3>I can only be me by Mars Argo</h3>
+             <p class='artist'>Mars Argo</p>
+        <div class="item"></div>
+            <img src="images/5.jpg">
+            <h3>I can't handle change</h3>
+            <p class='artist'>Roar</p>
+    </main>
+  
 
 </body>
 
-<style>
-    * {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
-
-.body1{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aliceblue;
-}
-.flip{
-    position: relative;
-    width: 400px;
-    height:400px;
-    transition: transform 0.5s;
-
-}
-.pages{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    perspective: 1500px;
-
-}
-.front{
-    backface-visibility: hidden;
-    border-left:25px solid aliceblue;
-}
-
-.front,
-.back{
-    background-color:white;
-    position: absolute;
-    width:  100%;
-    height:  100%;
-    top:0;
-    left:0;
-    transform-origin: left;
-    transition: transform 0.5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-
-
-.front{
-    z-index: 1;
-}
-
-.back{
-    z-index: 0;
-}
-
-.front-content,
-.back-content{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.back-content{
-    transform: rotateY(180deg);
-}
-
-/* pages flipped*/
-.flipped .front,
-.flipped .back{
-    transform: rotateY(-180deg);
-    
-}
-
-
-button svg {
-    width: 50px; /* Controls the width of the SVG icon */
-    height: 50px; /* Controls the height of the SVG icon */
-    color: gray; /* Controls the color of the SVG icon via 'currentColor' */
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* For hover effects */
-}
-
-button:hover svg {
-    color: #636363; /* Change color on hover */
-    transform: scale(1.1); /* Scale up on hover */
-}
-button{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    margin: 10px;
-    transition: transform 0.5s;
-}
-button:focus{
-    outline:none;
-}
-button:hover i{
-    color:#636363
-
-}
-
-.back{
-    z-index: 0;
-}
-.front-content,
-.back-content{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* stack order*/
-#p1{
-    z-index: 4;
-}
-#p2{
-    z-index: 3;
-}
-#p3{
-    z-index: 2;
-}
-#p4{
-    z-index:1;
-}
-
-/*-button isn't working.prev-btn{
-    border: none;
-    color: blue;
-    cursor:pointer;
-    margin:10px;
-    transition: transform 0.5s;
-}
-*/
-
-
-</style>
 </html>
+<style>
+    body{
+    background-color: aliceblue;
+    height: 600px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+    font-family: 'Poppin', sans-serif;
+}
+.item img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top:15px;
+    }
+</style>
