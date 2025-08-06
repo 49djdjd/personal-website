@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Carousel with DOM Control</title>
+    <!-- Use a modern font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /*
+        * =========================================================
+        * SECTION 1: GLOBAL STYLES & LAYOUT
+        * =========================================================
+        */
+        body {
+            background-color: aliceblue;
+            height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* The main container for the carousel */
+        main#carousel {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            height: 500px;
+            
+            /* These properties are crucial for the 3D effect */
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            
+            /* The parent element does not rotate */
+            transform: none;
+        }
+
+        /*
+        * =========================================================
+        * SECTION 2: CAROUSEL ITEM STYLING & ANIMATION
+        *
+        * Each item has a fixed position within the 3D space.
+        * The JavaScript will handle all of the dynamic rotation and scaling.
+        * =========================================================
+        */
+        div.item {
+            text-align: center;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            width: 200px;
+            height: 200px;
+            
+            /* Positioning for the 3D effect */
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            /* Add a transition for smooth movement and scaling */
+            transition: transform 0.5s ease-in-out;
+            
+            /* The transform origin is key for the 3D rotation */
+            transform-origin: 50% 100% -500px;
+
+            /* Add a pointer cursor to indicate it's clickable */
+            cursor: pointer;
+        }
+        
+        /* Image styling */
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /*
+        * This class is added by JavaScript to the currently active item
+        * to make it stand out.
+        */
+        div.item.active {
+            transform: scale(1.2);
+            z-index: 100;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main id="carousel">
+        <!-- We use the data-index attribute to identify each item -->
+        <div class="item" data-index="0">
+            <img src="https://placehold.co/400x400/FFD700/000000?text=Album+1" alt="Album cover 1">
+        </div>
+        <div class="item" data-index="1">
+            <img src="https://placehold.co/400x400/ADD8E6/000000?text=Album+2" alt="Album cover 2">
+        </div>
+        <div class="item" data-index="2">
+            <img src="https://placehold.co/400x400/DDA0DD/000000?text=Album+3" alt="Album cover 3">
+        </div>
+        <div class="item" data-index="3">
+            <img src="https://placehold.co/400x400/90EE90/000000?text=Album+4" alt="Album cover 4">
+        </div>
+        <div class="item" data-index="4">
+            <img src="https://placehold.co/400x400/FFB6C1/000000?text=Album+5" alt="Album cover 5">
+        </div>
+    </main>
+
+    <!-- This is the JavaScript that controls the carousel -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('carousel');
+            const items = document.querySelectorAll('.item');
+            const totalItems = items.length;
+            const rotationAngle = 360 / totalItems;
+            let activeIndex = 0;
+
+            // This function updates the position of all items based on the active one
+            function updateCarousel() {
+                items.forEach((item, index) => {
+                    const relativeIndex = index - activeIndex;
+                    const rotation = relativeIndex * rotationAngle;
+                    
+                    // Apply the rotation transformation to each item
+                    item.style.transform = `rotateY(${rotation}deg)`;
+
+                    // Add/remove the 'active' class to scale the item
+                    if (index === activeIndex) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            }
+
+            // Add click event listeners to each item
+            items.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    activeIndex = index; // Update the active index
+                    updateCarousel(); // Re-render the carousel
+                });
+            });
+
+            // Set the initial state of the carousel
+            updateCarousel();
+        });
+    </script>
+</body>
+</html>

@@ -9,6 +9,17 @@
 </head>
 
 <body>
+       <nav class="navbar">
+      <div class="navdiv">
+        <div class = "logo"><a href="music.html"><img src="small chococat.png"></a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      </nav>
     <input type="radio" name="position"/>
     <input type="radio" name="position"/>
     <input type="radio" name="position" checked/>
@@ -63,13 +74,15 @@ main#carousel{
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     transform-style: preserve-3d;
-    perspective: 600px;
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+    perspective: 1000px;
     --items: 5;
     --middle: 3;
     --position: 1;
-    pointer-events: none;
+    pointer-events: all;
 }
 div.item{
     text-align: center;
@@ -82,6 +95,8 @@ div.item{
     transform: rotateY(calc(-10deg * var(--r)))
     translateX(calc(-500px * var(--r)));
     z-index: calc((var(--position) - var(--abs)));
+    /* this part is from ai (so its clickable) */
+    cursor: pointer;
 }
 
 div.item:nth-of-type(1){
@@ -107,9 +122,17 @@ input:nth-of-type(1){
 input:nth-of-type(1):checked ~ main#carousel{
     --position:1;
 }
+input:nth-of-type(1):checked ~ main#carousel div.item:nth-of-type(1):hover{
+    transform: scale(1.1);
+    z-index: 100;
+}
 input:nth-of-type(2){
     grid-column: 3/4;
     grid-row: 2/3;
+}
+input:nth-of-type(2):checked ~ main#carousel div.item:nth-of-type(2):hover{
+    transform: scale(1.1);
+    z-index: 100;
 }
 input:nth-of-type(2):checked ~ main#carousel{
     --position:2;
@@ -119,17 +142,27 @@ input:nth-of-type(3){
     grid-column: 4/5;
     grid-row: 2/3;
 }
+
 input:nth-of-type(3):checked ~ main#carousel{
     --position:3;
 
+}
+input:nth-of-type(2):checked ~ main#carousel div.item:not(nth-of-type(2)):hover{
+    transform: scale(1.1);
+    z-index: 100;
 }
 input:nth-of-type(4){
     grid-column: 5/6;
     grid-row: 2/3;
 }
+
 input:nth-of-type(4):checked ~ main#carousel{
     --position:4;
 
+}
+input:nth-of-type(4):checked ~ main#carousel div.item:nth-of-type(4):hover{
+    transform: scale(1.1);
+    z-index: 100;
 }
 input:nth-of-type(5){
     grid-column: 6/7;
@@ -138,5 +171,24 @@ input:nth-of-type(5){
 input:nth-of-type(5):checked ~ main#carousel{
     --position:5;
 
+    
+}
+input:nth-of-type(5):checked ~ main#carousel div.item:nth-of-type(5):hover{
+    transform: scale(1.1);
+    z-index: 100;
 }
 </style>
+<script>
+    //this is from AI (the guide did not work in this aspect) (putting this here for transparency)
+      document.addEventListener('DOMContentLoaded', () => {
+        const items = document.querySelectorAll('#carousel .item');
+        const radioButtons = document.querySelectorAll('input[name="position"]');
+
+        items.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                // When an item is clicked, check the corresponding radio button
+                radioButtons[index].checked = true;
+            });
+        });
+    });  
+</script>
