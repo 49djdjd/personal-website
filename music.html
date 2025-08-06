@@ -20,9 +20,9 @@
         </ul>
       </div>
       </nav>
-    <input type="radio" name="position"/>
-    <input type="radio" name="position"/>
     <input type="radio" name="position" checked/>
+    <input type="radio" name="position"/>
+    <input type="radio" name="position"/>
     <input type="radio" name="position"/>
     <input type="radio" name="position"/>
 <!--will make more-->
@@ -51,15 +51,28 @@
 <style>
 /* used a guide for this part as a refernce but made it my own */
     body{
-    background-color: aliceblue;
     height: 400px;
     margin: 0;
-    display: grid;
-    grid-template-rows: 500px 500px;
-    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-items: center;
     font-family: 'Poppins', sans-serif;
+}
+.navbar{
+    padding: 1rem 2rem;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 100;
+}
+.navdiv{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .item img{
     width: 400px;
@@ -83,6 +96,7 @@ main#carousel{
     --middle: 3;
     --position: 1;
     pointer-events: all;
+    margin-top: 150px;
 }
 div.item{
     text-align: center;
@@ -147,7 +161,7 @@ input:nth-of-type(3):checked ~ main#carousel{
     --position:3;
 
 }
-input:nth-of-type(2):checked ~ main#carousel div.item:not(nth-of-type(2)):hover{
+input:nth-of-type(3):checked ~ main#carousel div.item:nth-of-type(3):hover{
     transform: scale(1.1);
     z-index: 100;
 }
