@@ -4,18 +4,80 @@ body{
 *{
     text-decoration: none;
 }
+/* used a guide from w3 for nav dropdown*/
 .navbar{
-    background:#3A7CA5; font-family: calibri; padding-right: 15px; padding-left: 15px;
+    background-color:#3A7CA5; 
+    font-family: calibri; 
+    padding-right: 15px; 
+    padding-left: 15px;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navbar a{
+    float:left;
+    font-size: 16px;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown{
+    float:left;
+    overflow: hidden;
+}
+.dropdown .dropbtn{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color:white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content{
+    display: none;
+    position:absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    clear: both;
+}
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
 }
 .navdiv{
-    display: flex;align-items: center; justify-content: space-between;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
 }
 li{
-    list-style: none; display: inline-block
+    display: inline-block
 }
 li a{
-    color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+    color: white; 
+    font-size: 18px; font-weight: 
+    bold; margin-right: 25px;
 }
 .logo a {
-    font-size: 35px; font-weight: 600; color: white
+    font-size: 35px; 
+    font-weight: 600; 
+    color: white
+}
+/* used ai for this line (debugging) */
+.dropdown-content li{
+    display: block;
 }
