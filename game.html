@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+          <div class = "logo"><a href="index.html"><img src="small chococat.png"></a>
+          </div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <div class="dropdown">
+              <button class="dropbtn"> Hobbies
+                <i class="fa far-caret-down"></i>
+              </button> 
+              <div class="dropdown-content">
+              <li><a href="vinyl.html">Vinyls</a></li>
+              <li><a href="game.html">Games</a></li>
+              <li><a href="#">Movies</a></li>
+              <li><a href="lain.html">Lain</a></li>
+               <li><a href="#">Scrapbooking</a></li>
+              </div>         
+            </div>
+  
+          <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    <h2>Recent Games that I enjoyed!</h2>
+      <div class="container-carousel">
+        <main id="carousel">
+            <div class="item">
+                <img src="game-images/omori.jpg">
+                <h4>Omori</h4>
+            </div>
+            <div class="item">
+                <img src="game-images/dbh.jpeg">
+                <h3>Detriot Becomes Human</h3>
+            </div>
+            <div class="item">
+                 <img src="game-images/fnaf.jpg">
+                 <h3>Five Night's At Freddy's</h3>
+            </div>
+            <div class="item">
+                <img src="game-images/undertale.png">
+                <h3>Undertale</h3>
+            </div>
+            <div class="item">
+                <img src="game-images/super smash.png">
+                <h3>Super Smash Bro</h3>
+            </div>
+            <div class="item">
+                <img src="game-images/dangonropa.jpg">
+                <h3>Dangonropa</h3>
+            </div>
+            <div class="item">
+                <img src="game-images/ddlc.webp">
+                <h3>Doki Doki Literature Club</h3>
+            </div>
+            <div class="item">
+                <img src="game-images/class of 09.jpg">
+                <h3>Class of 09</h3>
+            </div>
+              <div class="item">
+                <img src="game-images/bs.webp">
+                <h3>Brawl Stars</h3>
+            </div>
+            <div class="item">
+                <img src="game-images/animal crossing.jpg">
+                <h3>Animal Crossing: New Horizons</h3>
+            </div>
+            <div class="item">
+                <img src="game-images/mouthwashing.jpg">
+                <h3>Mouthwashing</h3>
+            </div>
+        </main>
+        <div class="radio-container">
+            <input type="radio" name="position" checked/>
+            <input type="radio" name="position"/>
+            <input type="radio" name="position"/>
+            <input type="radio" name="position"/>
+            <input type="radio" name="position"/>
+            <input type="radio" name="position"/>
+            <input type="radio" name="position"/>
+            <input type="radio" name="position"/>
+            <input type="radio" name="position"/>
+            <input type="radio" name="position"/>
+            <input type="radio" name="position"/>
+    
+        </div>
+        
+    </div>
+    <div class="text">
+        <h3>Disclaimer!</h3>
+        <p> Quite a few of these games have erm a very intresting fanbase... (I would like to clarify that I have no involvement in that) but I do enjoy most of these games! Both Omori and Detriot Becomes Human was legendary games. I played all of the FNAF games with my brother (it was extremly fun!) but FNAF 4 spooked me... Undertale was super fun since I went in with no spoilers! (Flowery scared me...) I love playing bayonetta in super smash, her animations are soo smooth. Dangonropa (erm!) I only played the first two games and honestly putting the fan service aside it was really fun! (the fanbase is erm ... but I think the game is well made) DDLC was very fun! I did go into it with spoilers but I was still a little spooked with Monika. I enjoyed class of 09 and the reup and in my head the flipside never existed. I used to play brawl stars really often (not so much now) but I was an angelo/sandy main! (shoutout to them). Animal Crossing defintely has like 50 hours +, my wardrobe is huge.. Mouthwashing, I loved the theme, defintiely recommend checking out! (I played at night so I got a little scared (maybe I am just a scaredy cat..))</p>
+    </div>
+    </body>
+    </html>
+    <style>
+/* used a guide from w3 for nav dropdown*/
+/* i know my code isn't the most orgnaized but if it work i think its best for me not to touch it T-T*/
+body{
+    background-color: #F5F1ED;
+}
+.navbar{
+    background-color:#3A7CA5; 
+    padding-right: 15px; 
+    padding-left: 15px;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navbar a{
+    float:left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown{
+    float:left;
+    overflow: hidden;
+}
+.dropdown .dropbtn{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content{
+    display: none;
+    position:absolute;
+    background-color: #98b7c9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    float: none;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    clear: both;
+}
+.dropdown-content a:hover{
+    background-color: #699AB7;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.navdiv{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+li{
+    display: inline-block
+}
+li a{
+    font-size: 18px; 
+    font-weight:bold;
+}
+.logo a {
+    font-size: 35px; 
+    font-weight: bold;
+}
+/* used ai for this line (debugging) */
+.dropdown-content li{
+    display: block;
+}
+.spotify{
+        display: flex;
+        justify-self: center;
+    }
+    
+    #vinyl{
+        height: 300px;
+        width: 300px;
+        float: left;
+        margin: 20px;
+    }
+    .vinyltext{
+        margin-top:400px;
+    }
+    .textv{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    /* used a guide for this part as a refernce but made it my own */
+        body{
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Courier New', Courier, monospace
+    }
+    .navbar{
+        width: 100%;
+        position: fixed;
+        top:0;
+        left: 0;
+        z-index: 100;
+    }
+    .navdiv{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    ul{
+        list-style:none;
+        display:flex;
+        gap:2rem;
+        margin: 0;
+        padding: 0;
+    }
+    .item img{
+        width: 400px;
+        height: 400px;
+        margin-top:15px;
+        }
+    .carousel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main#carousel{
+        width: 400px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform-style: preserve-3d;
+        display: flex;
+        align-items: center;
+        gap:1.5rem;
+        perspective: 1000px;
+        --items: 11;
+        --middle: 7;
+        --position: 1;
+        pointer-events: all;
+        margin-bottom: 2rem;
+    /*ai was used for this line */
+        --position: var(--data-position, 1)
+    }
+    /*ai was used for this line as well */
+    main#carousel.is-transitioning{
+        pointer-events: none;
+    }
+    input[type="radio"]{
+        margin: 0 5px;
+    
+    }
+    div.item{
+        text-align: center;
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        --r: calc(var(--position) - var(--offset));
+        --abs: max(calc(var(--r) * -1), var(--r));
+        transition: all 0.5s linear;
+        transform: rotateY(calc(-10deg * var(--r)))
+        translateX(calc(-500px * var(--r)));
+        z-index: calc((var(--position) - var(--abs)));
+        /* this part is from ai (so its clickable) */
+        cursor: pointer;
+    }
+    div.item:nth-of-type(1){
+        --offset:1;
+    }
+    div.item:nth-of-type(2){
+        --offset:2;
+    }
+    div.item:nth-of-type(3){
+        --offset:3;
+    }
+    div.item:nth-of-type(4){
+        --offset:4;
+    }
+    div.item:nth-of-type(5){
+        --offset:5;
+    }
+    div.item:nth-of-type(6){
+        --offset:6;
+    }
+    div.item:nth-of-type(7){
+        --offset:7;
+    }
+    div.item:nth-of-type(8){
+        --offset:8;
+    }
+    div.item:nth-of-type(9){
+        --offset:9;
+    }
+    div.item:nth-of-type(10){
+        --offset:10;
+    }
+    div.item:nth-of-type(11){
+        --offset:11;
+    }
+    input:nth-of-type(1):checked ~ main#carousel{
+        --position:1;
+    }
+    input:nth-of-type(2):checked ~ main#carousel{
+        --position:2;
+    
+    }
+    input:nth-of-type(3):checked ~ main#carousel{
+        --position:3;
+    
+    }
+    input:nth-of-type(4):checked ~ main#carousel{
+        --position:4;
+    }
+    input:nth-of-type(5):checked ~ main#carousel{
+        --position:5;
+    }
+    input:nth-of-type(6):checked ~ main#carousel{
+        --position:6;
+    }
+    input:nth-of-type(7):checked ~ main#carousel{
+        --position:7; 
+    }
+    input:nth-of-type(8):checked ~ main#carousel{
+        --position:8;
+    }
+    input:nth-of-type(9):checked ~ main#carousel{
+        --position:9;
+    }
+    input:nth-of-type(10):checked ~ main#carousel{
+        --position:10;
+    }
+    input:nth-of-type(11):checked ~ main#carousel{
+        --position:11;
+    }
+    .container-carousel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .radio-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    </style>
+   
+</style>
+<script>
+    //this is suplemented and debugged with AI (the guide did not work in this aspect) (putting this here for transparency)
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('carousel');
+    const items = document.querySelectorAll('#carousel .item');
+    const radios = document.querySelectorAll('.radio-container input[name="position"]');
+    const transitionDuration = 500;
+
+    function updateCarouselPosition(index) {
+        const currentPosition = parseInt(carousel.dataset.position, 10) || 1;
+        if (currentPosition === index + 1) {
+            return;
+        }
+        carousel.classList.add('is-transitioning');
+        carousel.dataset.position = index + 1;
+        carousel.style.setProperty('--data-position', index + 1);
+
+        setTimeout(() => {
+            carousel.classList.remove('is-transitioning');
+        }, transitionDuration);
+    }
+    carousel.dataset.position = 1;
+    carousel.style.setProperty('--data-position', 1);
+
+    items.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            updateCarouselPosition(index);
+            radios[index].checked = true;
+        });
+    });
+    radios.forEach((radio, index) => {
+        radio.addEventListener('change', () => {
+            if (radio.checked) {
+                updateCarouselPosition(index);
+            }
+        });
+    });
+});
+</script>

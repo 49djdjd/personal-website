@@ -1,5 +1,5 @@
 body{
-    background-color: #D9DCD6;
+    background-color: #F5F1ED;
 }
 *{
     text-decoration: none;
@@ -7,16 +7,14 @@ body{
 /* used a guide from w3 for nav dropdown*/
 .navbar{
     background-color:#3A7CA5; 
-    font-family: calibri; 
     padding-right: 15px; 
     padding-left: 15px;
-    overflow: hidden;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .navbar a{
     float:left;
     font-size: 16px;
-    color:white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -30,7 +28,7 @@ body{
     font-size: 16px;
     border: none;
     outline: none;
-    color:white;
+    font-weight: bold;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -39,22 +37,21 @@ body{
 .dropdown-content{
     display: none;
     position:absolute;
-    background-color: #f9f9f9;
+    background-color: #98b7c9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1000;
 }
 .dropdown-content a{
     float: none;
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
     clear: both;
 }
 .dropdown-content a:hover{
-    background-color: #ddd;
+    background-color: #699AB7;
 }
 .dropdown:hover .dropdown-content{
     display: block;
@@ -63,19 +60,19 @@ body{
     display: flex;
     align-items: center; 
     justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 li{
     display: inline-block
 }
 li a{
-    color: white; 
-    font-size: 18px; font-weight: 
-    bold; margin-right: 25px;
+    font-size: 18px; 
+    font-weight:bold;
 }
 .logo a {
     font-size: 35px; 
-    font-weight: 600; 
-    color: white
+    font-weight: bold;
 }
 /* used ai for this line (debugging) */
 .dropdown-content li{
