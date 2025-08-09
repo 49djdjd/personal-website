@@ -13,7 +13,7 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <div class="dropdown">
-              <button class="dropbtn"> Hobbies
+              <button class="dropbtn"> Interests
                 <i class="fa far-caret-down"></i>
               </button> 
               <div class="dropdown-content">
@@ -29,6 +29,7 @@
           </ul>
         </div>
       </nav>
+<div class = "everything">
     <h2>Recent Games that I enjoyed!</h2>
       <div class="container-carousel">
         <main id="carousel">
@@ -95,8 +96,9 @@
     </div>
     <div class="text">
         <h3>Disclaimer!</h3>
-        <p> Quite a few of these games have erm a very intresting fanbase... (I would like to clarify that I have no involvement in that) but I do enjoy most of these games! Both Omori and Detriot Becomes Human was legendary games. I played all of the FNAF games with my brother (it was extremly fun!) but FNAF 4 spooked me... Undertale was super fun since I went in with no spoilers! (Flowery scared me...) I love playing bayonetta in super smash, her animations are soo smooth. Dangonropa (erm!) I only played the first two games and honestly putting the fan service aside it was really fun! (the fanbase is erm ... but I think the game is well made) DDLC was very fun! I did go into it with spoilers but I was still a little spooked with Monika. I enjoyed class of 09 and the reup and in my head the flipside never existed. I used to play brawl stars really often (not so much now) but I was an angelo/sandy main! (shoutout to them). Animal Crossing defintely has like 50 hours +, my wardrobe is huge.. Mouthwashing, I loved the theme, defintiely recommend checking out! (I played at night so I got a little scared (maybe I am just a scaredy cat..))</p>
+        <p cla> Quite a few of these games have erm a very intresting fanbase... (I would like to clarify that I have no involvement in that) but I do enjoy most of these games! Both Omori and Detriot Becomes Human was legendary games. I played all of the FNAF games with my brother (it was extremly fun!) but FNAF 4 spooked me... Undertale was super fun since I went in with no spoilers! (Flowery scared me...) I love playing bayonetta in super smash, her animations are soo smooth. Dangonropa (erm!) I only played the first two games and honestly putting the fan service aside it was really fun! (the fanbase is erm ... but I think the game is well made) DDLC was very fun! I did go into it with spoilers but I was still a little spooked with Monika. I enjoyed class of 09 and the reup and in my head the flipside never existed. I used to play brawl stars really often (not so much now) but I was an angelo/sandy main! (shoutout to them). Animal Crossing defintely has like 50 hours +, my wardrobe is huge.. Mouthwashing, I loved the theme, defintiely recommend checking out! (I played at night so I got a little scared (maybe I am just a scaredy cat..))</p>
     </div>
+</div>
     </body>
     </html>
     <style>
@@ -109,8 +111,11 @@ body{
     background-color:#3A7CA5; 
     padding-right: 15px; 
     padding-left: 15px;
-    overflow: hidden;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.everything{
+    text-align: center;
+    margin-top: 200px;
 }
 .navbar a{
     float:left;
@@ -120,7 +125,9 @@ body{
     padding: 14px 16px;
     text-decoration: none;
 }
-
+p{
+    margin: 20px;
+}
 .dropdown{
     float:left;
     overflow: hidden;
@@ -177,27 +184,8 @@ li a{
 .dropdown-content li{
     display: block;
 }
-.spotify{
-        display: flex;
-        justify-self: center;
-    }
-    
-    #vinyl{
-        height: 300px;
-        width: 300px;
-        float: left;
-        margin: 20px;
-    }
-    .vinyltext{
-        margin-top:400px;
-    }
-    .textv{
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    /* used a guide for this part as a refernce but made it my own */
-        body{
+ /* used a guide for this part as a refernce but made it my own */
+body{
         height: 100vh;
         margin: 0;
         display: flex;
@@ -224,7 +212,7 @@ li a{
         display:flex;
         gap:2rem;
         margin: 0;
-        padding: 0;
+        padding: 15px;
     }
     .item img{
         width: 400px;
@@ -359,7 +347,6 @@ li a{
     }
     </style>
    
-</style>
 <script>
     //this is suplemented and debugged with AI (the guide did not work in this aspect) (putting this here for transparency)
 document.addEventListener('DOMContentLoaded', () => {

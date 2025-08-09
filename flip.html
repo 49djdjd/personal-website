@@ -39,12 +39,12 @@
     <div id="p1" class="pages">
         <div class="front">
             <div id="f1" class="front-content">
-                <img class="cover-img" src="book-images/CO.jpg">
+                <img class="cover-img" src="character-images/lain.webp">
             </div>
         </div>
         <div class="back">
                 <div id="b1" class="back-content">
-                    <img src="roadkill (1).jpg">
+                    <img src="character-images/snoopy.webp">
                 </div>
             </div>
     </div>
@@ -53,12 +53,12 @@
     <div id="p2" class="pages">
         <div class="front">
             <div id="f2" class="front-content">
-                <img src="twilight (1).jpg">
+                <img src="character-images/pc.webp">
             </div>
         </div>
         <div class="back">
                 <div id="b2" class="back-content">
-                    <img src = "who really cares (1).jpg">
+                    <img src = "character-images/hong sul.webp">
                 </div>
             </div>
         </div>
@@ -66,12 +66,12 @@
     <div id="p3" class="pages">
         <div class="front">
             <div id="f3" class="front-content">
-                <img src="i can only be me (1).jpg">
+                <img src="character-images/nacho (1).avif">
             </div>
         </div>
         <div class="back">
                 <div id="b3" class="back-content">
-                    <img src="gemini rights (1).png">
+                    <img src="character-images/penolope.webp">
                 </div>
             </div>
         </div>
@@ -79,12 +79,12 @@
 <div id="p4" class="pages">
         <div class="front">
             <div id="f4" class="front-content">
-                <img src="i cant handle change (1).jpg">
+                <img src="character-images/hong sul.webp">
             </div>
         </div>
         <div class="back">
                 <div id="b4" class="back-content">
-                    <img src="be the cowboy (1).jpg">
+                    <img src="character-images/lain.webp">
                 </div>
             </div>
         </div>
@@ -123,18 +123,18 @@
 }
 .flip{
     position: relative;
-    width: 400px;
-    height:400px;
+    width: 500px;
+    height:500px;
     transition: transform 0.5s;
+    perspective: 1500px;
 
 }
 .pages{
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    perspective: 1500px;
 
 }
 .front{
@@ -157,8 +157,6 @@
     align-items: center;
 
 }
-
-
 
 .front{
     z-index: 1;
@@ -205,7 +203,7 @@ button{
     border: none;
     background-color: transparent;
     cursor: pointer;
-    margin: 10px;
+    margin: 20px;
     transition: transform 0.5s;
 }
 button:focus{
@@ -227,20 +225,20 @@ button:hover i{
     justify-content: center;
     align-items: center;
 }
-/* stack order*/
-#p1{
-    z-index: 4;
-}
-#p2{
-    z-index: 3;
-}
-#p3{
-    z-index: 2;
-}
-#p4{
-    z-index:1;
+
+#prev-btn {
+  position: absolute;
+  left: 20%; /* Adjust this value */
+  top: 50%;
+  transform: translateY(-25%); /* Vertically centers the button */
 }
 
+#next-btn {
+  position: absolute;
+  right: 20%; /* Adjust this value */
+  top: 50%;
+  transform: translateY(-25%);
+}
 /*-button isn't working.prev-btn{
     border: none;
     color: blue;
