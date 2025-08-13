@@ -1,0 +1,98 @@
+<html lang="en">
+  <head>
+    <meta charsets="UTF-8"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>49djdjd's Website</title>
+    <link rel="icon" type="image/x-icon" href="chococat.png">
+   
+  </head>
+<!--used a guide from w3 for nav dropdown but changed it up to make it my own(transparency)--> 
+  <body>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class = "logo"><a href="index.html"><img src="small chococat.png"></a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <div class="dropdown">
+            <button class="dropbtn"> Interests
+              <i class="fa far-caret-down"></i>
+            </button> 
+            <div class="dropdown-content">
+            <li><a href="vinyl.html">Vinyls</a></li>
+            <li><a href="game.html">Games</a></li>
+            <li><a href="flip.html">Characters</a></li>
+            </div>         
+          </div>
+          <li><a href="music.html">Music</a></li>
+        </ul>
+      </div>
+    </nav>
+<div class="mtext">
+    <p> these are so</p>
+</div>
+<div class="gallery">
+    <div class="section 1">
+    <div class="adp">
+        <img src="music-images/adp.avif" alt="all day project image">
+        </div>
+    <div class="am">
+        <img src="music-images/am.jpg" alt="arctic monkey image">
+        </div>
+    <div class="bandb">
+        <img src="music-images/bandb.png" alt="bird and the bees image">
+    </div>
+    <div class="chapel">
+        <img src="music-images/chapel.png" alt="subway image">
+        </div>
+    </div>
+    <div class="section 2">
+     <div class="igor">
+            <img src="music-images/igor.jpeg" alt="igor image">
+        </div>
+    <div class="pinkerton">
+            <img src="music-images/pinkerton.jpg" alt="pinkerton image">
+     </div>
+
+     <div class="radiohead">
+        <img src="music-images/radiohead.png" alt="radiohead image">
+    </div>
+    <div class="serani poki">
+    <img src="music-images/serani poji.jpeg" alt="serani poji image">
+    </div>
+    </div>
+    <div class="section 3">
+    <div class="short and sweet">
+    <img src="music-images/short and sweet.png" alt="short and sweet">
+    </div>
+    <div class="suki">
+        <img src="music-images/suki.png" alt="suki waterhouse image">
+    </div>
+     <div class="super-trouper">
+    <img src="music-images/super trouper.jpg" alt="super trouper image">
+    </div>
+    <div class="whiplash">
+        <img src="music-images/whiplash.jpeg" alt="whiplash image">
+    </div>
+</div>
+</div>
+
+    </div>
+</div>
+<style>
+.gallery img{
+    height:400px;
+    width: 400px;
+    margin:20px;
+}
+.gallery{
+    display: flex;
+    gap:20px;
+    justify-content: space-evenly;
+}
+.gallery img:hover{
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+</style>
